@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Rebuild of the LSERSA website using 11ty",
   "scripts": {
-    "build": "npx @11ty/eleventy --output dist",
+    "build": "npx @11ty/eleventy",
     "clean": "rimraf _site",
     "dev": "npx @11ty/eleventy --serve --incremental",
     "serve": "npx @11ty/eleventy --serve --incremental",

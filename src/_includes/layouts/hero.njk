@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+hero_text: 'WELCOME<br>TO LSERSA'
+hero_url: './src/img/hero/hero_tri_2018.png'
+hero_alt: 'LSERSA racers at the 2018 Tri-Regional competition'
+hero_shade: 'rgba(0,0,0,0.2)'
+hero_text_color: '#fff'
+---
+
+<div class="container main-container">
+    <div class="left-column">
+            <div class="aspect-ratio-box">
+                <div class="aspect-ratio-box-inside">
+                    <div class="hero-shade" style="background-color: {{ hero_shade }};"></div>
+                    <p class="hero-text" style="color: {{ hero_text_color}}; border-bottom-color: {{ hero_text_color}};">{{ hero_text | safe}}</p>
+                    {% heroImage hero_url, hero_alt %}
+                </div>
+            </div>
+            <br>
+    </div>
+    {% include "components/carousel.njk" %}
+</div>
+<div class="container">
+    {{ content | safe }}
+</div>

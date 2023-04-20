@@ -1,0 +1,61 @@
+---js
+{
+    layout: "layouts/base.njk",
+    pagination: {
+        data: "races",
+        size: 1,
+        alias: "race",
+        before: function(paginationData, fullData) {
+            // `fullData` is new in v1.0.1 and contains the full Data Cascade thus far
+            return paginationData.filter((entry, idx) => idx != 0);
+        }
+    },
+    permalink: "races/{{ race.year | slugify }}/"
+}
+---
+<div class="container main-container">
+    <div class="left-column">
+            <div class="aspect-ratio-box">
+                <div class="aspect-ratio-box-inside">
+                    <div class="hero-shade" style="background-color: rgba(0,0,0,0.2);"></div>
+                    <p class="hero-text" style="color: white; border-bottom-color: white;">{{ race.year }}<br>RACES</p>
+                    {% heroImage "./src/img/hero/trophies.png", "Season trophies" %}
+                </div>
+            </div>
+            <br>
+    </div>
+    {% include "components/carousel.njk" %}
+</div>
+<div class="container">
+    <div class="row">
+        <h1>Results for {{ race.year }}</h1>
+        {% if race.year == "2020"%}
+            <p>Due to COVID there were no races held in 2020.</p>
+        {% else %}
+            <div class="table-responsive-container">
+                <table>
+                    {% for event in race.events %}
+                        <tr>
+                            <td class="subtitle" colspan="4"><b>{{ event.series }}</b></td>
+                        </tr>
+                        {% for race in event.races %}
+                            <tr>
+                                <td style="min-width: 160px;">{{ race.name | safe }}</td>
+                                <td style="min-width: 160px;">{{ race.venue | safe }}</td>
+                                <td style="min-width: 200px;">{{ race.date | safe }}</td>
+                                <td style="min-width: 100px;">
+                                    {% if race.url %}
+                                        <a href="{{ race.url }}" target="_offsite">{{ race.status | safe }}</a>
+                                    {% else %}
+                                        {{ race.status | safe }}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+            </div>
+        {% endif %}
+        {% include "components/race-years.njk" %}
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{% set links = navmenulinks %}
+
+<div class="container">
+    <div class="row">
+        <button class="icon" aria-label="menu">
+            <div class="icon-bar"></div>
+            <div class="icon-bar"></div>
+            <div class="icon-bar"></div>
+        </button>
+        <div>
+            <a class="brand" href="/">
+                {% navbarLogo "./src/img/logos/lsersa_white.png" %}
+                <span class="brand-text">LSERSA</span>
+            </a>
+            <ul>
+                {%- for item in links -%}
+                <li class="menu-wide">
+                    <a href="{{ item.link }}">
+                        {{ item.text }}
+                    </a>
+                </li>
+                {%- endfor -%}
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+        <div id="menu-responsive">
+            <ul>
+                {%- for item in links -%}
+                <li>
+                    <a href="{{ item.link }}">
+                        {{ item.text }}
+                    </a>
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    </div>
+</div>

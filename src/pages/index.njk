@@ -1,0 +1,27 @@
+---
+layout: "layouts/hero.njk"
+title: Homepage
+permalink: /
+---
+
+<div class="row">
+    <h1 class="underlined">London &amp; South East Regional Snowsports Association</h1>
+
+    <p>Regional Race Training is held at Chatham on Saturday mornings (9-11am).</p>
+    <p>Welcome to the London & South East Regional Snowsports Assocation, LSERSA. We are a regional
+        association affiliated with Snowsport England, the national governing body.</p>
+    <p>In addition to providing Regional Race Training and organising the LSERSA Summer Race Series, our
+        aim is to encourage participation in all snowsports.</p>
+    <br>
+    <hr />
+    <h2>Thankyou to our sponsors:</h2>
+    <div class="sponsor-logo-grid">
+        {% for item in sponsors %}
+            <div class="sponsor-logo-grid-item">
+                <a href="{{ item.url }}" target="{{ item.target }}" style="text-decoration: none;">
+                    {% sponsorImage item.img, item.name %}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,54 @@
+---
+layout: layouts/devtest.njk
+title: Color swabs
+tags: devtest
+description: Summary of colors available in style sheet
+permalink: /dev-tests/color-swab/
+---
+
+<div class="row">
+    <h1>Color swabs for reference & comparison</h1>
+    <p>Within SASS, colors are designated in the following hierarchy:</p>
+    <ul>
+        <li>base individual colors are designated using a name, eg <code>$color_primary</code></li>
+        <li>variants are designated using a letter/number combination, eg <code>$color_p500</code></li>
+        <li><b>classes</b> use a <i>dash</i> (not underscore) and letter/number, eg
+            <code>bg-p100</code> or <code>col-p500</code></li>
+    </ul>
+
+    <h2 class="as-h4 col-p500">Primary colours</h4>
+    <p>Primary brand color. <code>p100</code> is the primary text color throughout the site, whilst
+        <code>p500</code> is the primary brand color. The combinations shown below are designed to
+        meet accessibility contrast requirements (red border means it should not be used).</p>
+    <div>
+        <div class="color-test-swab bg-p100 col-p900">100 900</div>
+        <div class="color-test-swab bg-p300 col-p900">300 900</div>
+        <div class="color-test-swab bg-p500 col-p900">500 900</div>
+        <div class="color-test-swab bg-p700 col-p100">700 100</div>
+        <div class="color-test-swab bg-p900 col-p100">900 100</div>
+    </div>
+    <br />
+
+    <h2 class="as-h4 col-c500">Complementary colours</h4>
+    <p>Complementary color.</p>
+    <div>
+        <div class="color-test-swab bg-c100 col-c900">100 900</div>
+        <div class="color-test-swab bg-c300 col-c900" style="border: 4px solid red">300 900</div>
+        <div class="color-test-swab bg-c500 col-c100">500 100</div>
+        <div class="color-test-swab bg-c700 col-c100">700 100</div>
+        <div class="color-test-swab bg-c900 col-c100">900 100</div>
+    </div>
+    <br />
+
+    <h2 class="as-h4 col-g500">Greys</h4>
+    <p>Desaturated version of the primary colors. Note that within SASS there is no
+        <code>$color_grey</code> variable (<code>g100</code> etc are desaturated versions of the
+        equivalent primary color).</p>
+    <div>
+        <div class="color-test-swab bg-g100 col-g900">100 900</div>
+        <div class="color-test-swab bg-g300 col-g900">300 900</div>
+        <div class="color-test-swab bg-g500 col-g900">500 900</div>
+        <div class="color-test-swab bg-g700 col-g100">700 100</div>
+        <div class="color-test-swab bg-g900 col-g100">900 100</div>
+    </div>
+</div>

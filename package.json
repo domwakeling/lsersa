@@ -1,0 +1,27 @@
+{
+  "name": "lsersa",
+  "version": "1.0.0",
+  "description": "Rebuild of the LSERSA website using 11ty",
+  "scripts": {
+    "build": "npx @11ty/eleventy --output dist",
+    "clean": "rimraf _site",
+    "dev": "npx @11ty/eleventy --serve --incremental",
+    "serve": "npx @11ty/eleventy --serve --incremental",
+    "start": "npx @11ty/eleventy --serve --incremental",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy"
+  ],
+  "author": "Dom Wakeling <domwakeling@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.0",
+    "clean-css": "^5.3.2",
+    "js-yaml": "^4.1.0",
+    "rimraf": "^5.0.0",
+    "sass": "^1.62.0"
+  }
+}

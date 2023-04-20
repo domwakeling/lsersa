@@ -1,0 +1,19 @@
+# ignore node_modules for obvious reasons
+node_modules
+
+# ignore compiled site output
+_site
+
+# stuff I don't want to add
+.env
+.cache
+
+# full-size design files
+_design
+
+# Netlify folder, assume add functions at some point
+.netlify
+
+// Apple files that drive me round the twist
+.DS_Store
+src/img/.DS_Store

@@ -1,0 +1,53 @@
+---
+title: LSERSA Homepage
+description: LSERSA homepage, built with 11ty
+metacontent: []
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"  content="{{ description}}">
+        <meta name="generator" content="Eleventy">
+        {% for item in metacontent %}
+            <meta name="{{ item[0] }}" content="{{ item[1] }}">
+        {% endfor %}
+        {# <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self' gateway.zscalertwo.net;
+                    font-src fonts.gstatic.com;
+                    style-src 'self' fonts.googleapis.com gateway.zscalertwo.net 'unsafe-inline';
+                    script-src 'self' 'sha256-IFLnoFJnGoss5g00ruXDcPSotYzDGaT9vy0vg7HwsxA=' unpkg.com gateway.zscalertwo.net;
+                    img-src *;
+                    connect-src https://api.netlify.com/build_hooks/622db0523bf38e3cbcdabd0e localhost:* ws://localhost:*;"
+        > #}
+        <title>{{ title }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        {% if page.fileSlug == "sponsors" %}
+            <link rel="preload" href="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" as="script">
+        {% endif %}
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        {# <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> #}
+        {# <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> #}
+        {# <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> #}
+        {# <link rel="manifest" href="/site.webmanifest"> #}
+    </head>
+    <body>
+        <nav id="main-nav">
+            {% include "components/navbar.njk" %}
+        </nav>
+        <div class="content">
+            {{ content | safe }}
+            <br />
+        </div><!-- /div.content -->
+        {% include "components/footer.njk" %}
+        <script type="text/javascript" src="/js/navbar.js"></script>
+        {% if page.fileSlug == "sponsors" %}
+            <script type="text/javascript" src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,19 @@
+---
+permalink: /css/style.css
+---
+{% set css %}
+    {% include "styles/normalize.css" %}
+    {% include "styles/_size_reset.scss" %} 
+    {% include "styles/_color.scss" %}
+    {% include "styles/_layout.scss" %}
+    {% include "styles/_fonts.scss" %}
+    {% include "styles/_common_elements.scss" %}
+    {% include "styles/_navbar.scss" %}
+    {% include "styles/_footer.scss" %}
+    {% include "styles/_footer_fix.scss" %}
+    {% include "styles/_homepage.scss" %}
+    {% include "styles/_races.scss" %}
+    {% include "styles/_sponsors.scss" %}
+    {% include "styles/_tables.scss" %}
+{% endset %}
+{{ css | generateFromSCSS | safe }}

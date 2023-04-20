@@ -1,0 +1,22 @@
+---
+layout: "layouts/no-hero.njk"
+title: Sponsors
+permalink: /sponsors/
+---
+
+<div class="row">
+    <h1 class="header-no-hero underlined">Our Sponsors</h1>
+    <p>Many thanks to our sponsors, who help us to run the Summer Race Series.</p>
+    <div class="grid" data-masonry='{ "itemSelector": ".sponsor-card", "gutter": 20 }'>
+        {%- for item in sponsors -%}
+            <div class="sponsor-card">
+                <div class="sponsor-logo-grid-item">
+                    <a href="{{ item.url }}" target="{{ item.target }}">
+                        {% sponsorImage item.img, item.name %}
+                    </a>
+                </div>
+                {{ item.copy | safe }}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>

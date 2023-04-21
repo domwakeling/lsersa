@@ -54,6 +54,7 @@ that is less important to me than just getting everything updated.
 - [ ] add regional clubs; regional slopes (would like this to have some graphics ...)
 - [ ] look at the London races page (limited wish for this but need to retain key info)
 - [ ] add race-day timings to the race page
+- [x] add a dark blue under-layer to the hero images to improve initial legibility
 
 ## Notes
 

@@ -1,20 +1,4 @@
-div.triple-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    div.reason-box {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-img.homepage-icon {
-    height: 100px;
-    width: 100px;
-    margin: 1.0rem 0;
-}
-
-.banner-header, .reason-text {
+.banner-header {
     text-align: center;
 }
 
@@ -31,6 +15,7 @@ img.homepage-icon {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: $color_p300;
 }
 
 .hero-shade {
@@ -85,7 +70,6 @@ img.homepage-icon {
   @media (max-width: 700px) {
     width: 150px;
   }
-
 }
 
 .sponsor-image {
@@ -95,5 +79,4 @@ img.homepage-icon {
   @media (max-width: 700px) {
     width: 150px;
   }
-
 }

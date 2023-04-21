@@ -5,9 +5,12 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "clean": "rimraf _site",
-    "dev": "npx @11ty/eleventy --serve --incremental",
-    "serve": "npx @11ty/eleventy --serve --incremental",
-    "start": "npx @11ty/eleventy --serve --incremental",
+    "//dev": "npx @11ty/eleventy --serve --incremental",
+    "//serve": "npx @11ty/eleventy --serve --incremental",
+    "//start": "npx @11ty/eleventy --serve --incremental",
+    "dev": "netlify dev",
+    "serve": "npm run dev",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,8 +23,13 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
     "clean-css": "^5.3.2",
+    "js-beautify": "^1.14.7",
     "js-yaml": "^4.1.0",
+    "netlify-cli": "^14.2.1",
     "rimraf": "^5.0.0",
     "sass": "^1.62.0"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.1"
   }
 }

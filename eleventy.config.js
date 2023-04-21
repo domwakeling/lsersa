@@ -8,7 +8,12 @@ const {
     sponsorImage
 } = require('./utils/image_shortcodes.js');
 
+const { beautifyHTML } = require('./utils/transforms.js');
+
 module.exports = function (eleventyConfig) {
+
+    // beautify HTML files when output => ensures indentation is correct
+    eleventyConfig.addTransform("beautifyHTML", beautifyHTML);
 
     // compile SCSS to CSS and minify
     eleventyConfig.addFilter("generateFromSCSS", minifiedCSSfromSCSS);

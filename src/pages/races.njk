@@ -7,31 +7,41 @@ permalink: /races/
 ---
 
 <div class="row">
+
+    <div class="right-column-race">
+            <h2 class="as-h3" style="text-align: center;">Archives</h2>
+            <div style="width: 150px; margin:  auto;">
+                {% include "components/race-years.njk" %}
+            </div>
+        </div>
+
     <h1>{{ races[0].year }} Race Season</h1>
 
     <h2>Races</h2>
-    <div class="table-responsive-container">
-        <table>
-            {% for event in races[0].events %}
-                <tr>
-                    <td class="subtitle" colspan="4"><b>{{ event.series }}</b></td>
-                </tr>
-                {% for race in event.races %}
+    <div>
+        <div class="table-responsive-container left-column">
+            <table>
+                {% for event in races[0].events %}
                     <tr>
-                        <td style="min-width: 160px;">{{ race.name | safe }}</td>
-                        <td style="min-width: 160px;">{{ race.venue | safe }}</td>
-                        <td style="min-width: 200px;">{{ race.date | safe }}</td>
-                        <td style="min-width: 100px;">
-                            {% if race.url %}
-                                <a href="{{ race.url }}" target="_offsite">{{ race.status | safe }}</a>
-                            {% else %}
-                                {{ race.status | safe }}
-                            {% endif %}
-                        </td>
+                        <td class="subtitle" colspan="4"><b>{{ event.series }}</b></td>
                     </tr>
+                    {% for race in event.races %}
+                        <tr>
+                            <td style="min-width: 160px;">{{ race.name | safe }}</td>
+                            <td style="min-width: 160px;">{{ race.venue | safe }}</td>
+                            <td style="min-width: 200px;">{{ race.date | safe }}</td>
+                            <td style="min-width: 100px;">
+                                {% if race.url %}
+                                    <a href="{{ race.url }}" target="_offsite">{{ race.status | safe }}</a>
+                                {% else %}
+                                    {{ race.status | safe }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
-        </table>
+            </table>
+        </div>
     </div>
 
     <br>
@@ -97,5 +107,10 @@ permalink: /races/
         <a href="http://www.gbski.com/docstore/OTHER/Helmets%20for%20Alpine%20Ski%20Racing%20V6.pdf"
         target="_rules">The British Ski and Snowboard Guide to Helmets for Alpine Racing</a>.</p>
 
-    {% include "components/race-years.njk" %}
+    <br>
+    <div class="tablet-down">
+        <hr />
+        <h2 class="as-h3">Links to other years' results</h2>
+        {% include "components/race-years.njk" %}
+    </div>
 </div>

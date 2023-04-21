@@ -29,6 +29,12 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="right-column-race">
+            <h2 class="as-h3" style="text-align: center;">Archives</h2>
+            <div style="width: 150px; margin:  auto;">
+                {% include "components/race-years.njk" %}
+            </div>
+        </div>
         <h1>Results for {{ race.year }}</h1>
         {% if race.year == "2020"%}
             <p>Due to COVID there were no races held in 2020.</p>
@@ -66,6 +72,11 @@
                 </table>
             </div>
         {% endif %}
-        {% include "components/race-years.njk" %}
+        <br>
+        <div class="tablet-down">
+            <hr />
+            <h2 class="as-h3">Links to other years' results</h2>
+            {% include "components/race-years.njk" %}
+        </div>
     </div>
 </div>

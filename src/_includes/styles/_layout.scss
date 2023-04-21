@@ -66,3 +66,27 @@
         margin-top: 1.0rem;
     } 
 }
+
+.tablet-down {
+    @include for-desktop-only() {
+        display: none;
+    }
+}
+
+.right-column-race {
+    width: 220px;
+    float: right;
+    @include for-tablet-down() {
+        display: none;
+    }
+}
+
+.column-container {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+
+    @include for-tablet-down() {
+        grid-template-columns: 1fr;
+    }
+
+}

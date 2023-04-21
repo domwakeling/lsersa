@@ -516,3 +516,66 @@
             date: Sunday 12th June
             url:
             status:
+
+-   year: 2015
+    events:
+    -   series: LSERSA Summer Series
+        overall:
+        -   name: Overall Fastest Female
+            url: http://www.skiresults.co.uk/series/lsersa-fastest-female/ranking/892
+        -   name: Overall Fastest Male
+            url: http://www.skiresults.co.uk/series/lsersa-fastest-male/ranking/893
+        -   name: Overall Club
+            url: http://www.skiresults.co.uk/series/lsersa-club-performances/ranking/1348
+        races:
+        -   name: Race 1
+            venue: Aldershot
+            date: Sunday 19th April
+            url: http://www.skiresults.co.uk/events/304
+            status: Results
+        -   name: Race 2
+            venue: Brentwood
+            date: Saturday 16th May
+            url: http://www.skiresults.co.uk/events/2
+            status: Results
+        -   name: Race 3
+            venue: Welwyn
+            date: Sunday 28th June
+            url: http://www.skiresults.co.uk/events/410
+            status: Results
+        -   name: Race 4
+            venue: Brentwood
+            date: Sunday 6th September
+            url: http://www.skiresults.co.uk/events/411
+            status: Results
+        -   name: Race 5
+            venue: Brentwood
+            date: saturday 10th October
+            url: http://www.skiresults.co.uk/events/412
+            status: Results
+    
+    -   series: School Competitions
+        races:
+        -   name: London Schools
+            venue: Welwyn
+            date: Sunday 14th June
+            url:
+            status:
+        -   name: Kent Schools
+            venue: Brentwood
+            date: Saturday27th June
+            url:
+            status:
+        -   name: Surrey Schools
+            venue: Aldershot
+            date: Sunday 4th October
+            url:
+            status:
+    
+    -   series: Regional Competitions
+        races:        
+        -   name: Tri-Regional
+            venue: Brentwood
+            date: Saturday 17th October
+            url: http://www.srsa.org.uk/uploads/2015TriRegionResults.pdf
+            status: Results

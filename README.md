@@ -23,6 +23,7 @@ that is less important to me than just getting everything updated.
       and social media &mdash; is that enough to warrant a sidebar?)
 - [ ] what content do we want added? school outreach? getting interested in skiing? our
       actual current policies?
+- [x] sort out favicon
 
 ## Detail list
 - [ ] check `_common_elements.scss` for relevance
@@ -47,11 +48,12 @@ that is less important to me than just getting everything updated.
 - [ ] possibly add training booking ... this could be a big ask **but** would drive lots of traffic
 - [ ] bring over minutes and the like (probably do this through another data cascade)
 - [ ] round out all the races back to 1998 (through the data cascade + lots of resources)
-- [ ] anything else to add on the archive race pages?
+- [x] anything else to add on the archive race pages?
 - [ ] add committee
 - [ ] add policies (this is a piece of work in itself)
 - [ ] add regional clubs; regional slopes (would like this to have some graphics ...)
 - [ ] look at the London races page (limited wish for this but need to retain key info)
+- [ ] add race-day timings to the race page
 
 ## Notes
 

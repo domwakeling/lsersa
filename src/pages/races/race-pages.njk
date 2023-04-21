@@ -10,7 +10,8 @@
             return paginationData.filter((entry, idx) => idx != 0);
         }
     },
-    permalink: "races/{{ race.year | slugify }}/"
+    permalink: "races/{{ race.year | slugify }}/",
+    title: "Race Archive"
 }
 ---
 <div class="container main-container">
@@ -32,6 +33,7 @@
         {% if race.year == "2020"%}
             <p>Due to COVID there were no races held in 2020.</p>
         {% else %}
+            <p>Results from the {{ race.year }} LSERSA Summer Series and selected other races.</p>
             <div class="table-responsive-container">
                 <table>
                     {% for event in race.events %}
@@ -49,6 +51,14 @@
                                     {% else %}
                                         {{ race.status | safe }}
                                     {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        {% for result in event.overall %}
+                            <tr>
+                                <td colspan="3">{{ result.name | safe }}</td>
+                                <td style="min-width: 100px;">
+                                    <a href="{{ result.url }}" target="_offsite">Results</a>
                                 </td>
                             </tr>
                         {% endfor %}

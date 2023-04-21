@@ -28,6 +28,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("socialImage", socialImage);
     eleventyConfig.addShortcode("sponsorImage", sponsorImage);
 
+    // copy from src/_includes/favicons to the root
+    eleventyConfig.addPassthroughCopy({ "src/_includes/favicons": "." });
+
     // Return Object options:
     return {
         dir: {
